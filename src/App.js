@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Host from './components/Host'
-import Game from './components/Game'
+import Game from './components/Host/Game'
 import Quizzes from './components/Quiz/Quizzes'
 import ShowQuiz from './components/Quiz/ShowQuiz'
 import Lobby from './components/Host/Lobby'

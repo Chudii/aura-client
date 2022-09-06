@@ -29,7 +29,7 @@ const Joined = () => {
             socket.off('game_started')
             socket.off('host_disconnected')
         }
-    })
+    }, [])
 
     return (
         <div className='joined container'>

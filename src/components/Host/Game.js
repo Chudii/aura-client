@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react'
+// import React, { Component } from 'react'
 import { socket } from '../Global/Global'
+import QuestionIntro from './QuestionIntro'
+import Question from './Question'
+import Result from './Result'
+import Scoreboard from './Scoreboard'
+import GameOver from './GameOver'
 const queryString = require('query-string')
 
 const Game = () => {
@@ -66,6 +72,7 @@ const Game = () => {
             setGameId(gameId)
             setQuizName(quizName)
             setQuestion(question.question)
+            setAnswers(question.answers)
             setCorrectAnswer(question.correct)
             setTotalNumQuestions(totalNumQuestions)
         })
@@ -80,19 +87,77 @@ const Game = () => {
             setStep(3)
         })
 
+        socket.on('receive_scoreboard', rankedPlayers => {
+            setRankedPlayers(rankedPlayers)
+        })
+
+        socket.on('next_question', data => {
+            const { questionNumber, question } = data
+            setQuestionNum(questionNumber)
+            setQuestion(question)
+            setAnswers(question.answers)
+            setCorrectAnswer(question.correct)
+        })
+
         socket.on('game_over', data => {
             setGameStatus(false)
             setRankedPlayers(data)
         })
-    })
+    }, [])
 
-    const assignComponent = () => {
-        let component
+    const RenderSwitch = () => {
+        switch (step) {
+            case 1:
+                return <QuestionIntro
+                    nextStep={nextStep}
+                    questionNum={questionNum}
+                    question={question}
+                    totalNumQuestions={totalNumQuestions}
+                />
+            case 2:
+                return <Question 
+                    nextStep={nextStep}
+                    pin={pin}
+                    question={question}
+                    answers={answers}
+                />
+            case 3:
+                return <Result
+                    answers={answers}
+                    answeredA={answeredA}
+                    answeredB={answeredB}
+                    answeredC={answeredC}
+                    answeredD={answeredD}
+                    correctAnswer={correctAnswer}
+                    question={question}
+                    pin={pin}
+                    nextStep={nextStep}
+                    fetchScoreboard={fetchScoreboard}
+                />
+            case 4:
+                return <Scoreboard
+                    pin={pin}
+                    rankedPlayers={rankedPlayers}
+                    questionNum={questionNum}
+                    totalNumQuestions={totalNumQuestions}
+                    nextQuestion={nextQuestion}
+                    endGame={endGame}
+                    gameStatus={gameStatus}
+                />
+            case 5:
+                return <GameOver
+                    quizName={quizName}
+                    totalNumQuestions={totalNumQuestions}
+                    finalRankings={rankedPlayers}
+                />
+            default:
+                return null
+        }
     }
 
     return (
       <div className='game container'>
-        
+        <RenderSwitch />
       </div>
     )
 }

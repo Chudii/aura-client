@@ -36,7 +36,7 @@ const Lobby = () => {
             socket.off('show_pin')
             socket.off('update_lobby')
         }
-    },[])
+    }, [])
 
     const startGame = () => {
         socket.emit('host_started_game', pin)

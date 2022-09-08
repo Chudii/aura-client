@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+@font-face {
+    font-family: 'pwsmallicons';
+    src: url('../../assets/PWSmallIcons.ttf');
+}
+
+@font-face {
+    font-family: 'AnimeAce';
+    src: url('../../assets/animeace2_reg.ttf');
+}
+
+.question-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #233e49;
+}
+
+.top-question {
+    height: 25%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sanchez';
+}
+
+.question-middle {
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2vw;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 10vh;
+    font-family: 'Shrikhand';
+    font-size: 1.6rem;
+    color: #0c222c;
+    padding: 3vw;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(226, 201, 168);
+
+}
+
+.players-answered {
+    color: white;
+    font-family: 'Shrikhand';
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.choices {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.top-choices, .bottom-choices {
+    height: 40%;
+    display: flex;
+    margin-bottom: 1.5vh;
+    justify-content: space-evenly;
+}
+
+.spade, .heart, .diamond, .club { 
+    font-family: 'pwsmallicons';
+    font-size: 3rem;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.first-ans, .second-ans, .third-ans, .fourth-ans {
+    font-size: 1.5rem;
+}
+
+.first-ans {
+    font-family: 'AnimeAce';
+    display: flex;
+    align-items: center;
+    background-color: #46b59b;
+    width: 49%;
+}
+
+.second-ans {
+    font-family: 'AnimeAce';
+    display: flex;
+    align-items: center;
+    background-color: #f1c64d;
+    width: 49%;
+}
+
+.third-ans {
+    font-family: 'AnimeAce';
+    display: flex;
+    align-items: center;
+    background-color: #f4A261;
+    width: 49%;
+}
+
+.fourth-ans {
+    font-family: 'AnimeAce';
+    display: flex;
+    align-items: center;
+    background-color: #eb452b;
+    width: 49%;
+}

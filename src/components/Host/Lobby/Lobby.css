@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+
+.lobby {
+    background-color: #233e49;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background-color: white;
+    font-family: 'Sanchez';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh 0;
+    width: 50%;
+    height: 10vh;
+    border: 3px solid black;
+    align-self: center;
+    column-gap: 1vw;
+}
+
+.pin {
+    font-size: 1.6rem;
+}
+
+.pin-message {
+    font-size: 1.2rem;
+}
+
+.player-count {
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'Shrikhand';
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    column-gap: 0.5vw;
+}
+
+.start-button {
+    background-color: #017e7f;
+    font-family: 'AnimeAce';
+    font-size: 1rem;
+    margin: 1vh 0;
+    width: 10vw;
+    height: 4.5vh;
+    color: white;
+    border: 1px solid #017e7f;
+    border-radius: 5px;
+}
+
+.start-button:hover {
+    background-color: #46b59b;
+}
+
+.mid-section {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    justify-content: space-between;
+    margin: 0 3vw;
+}
+
+.player-list {
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Shrikhand';
+    font-size: 1.6rem;
+    width: 70%;
+    height: auto;
+    color: white;
+}
+
+.player-container {
+    display: flex;
+    justify-content: center;
+}
+
+.player {
+    margin: 1vh 0;
+    text-align: center;
+    width: 20%;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

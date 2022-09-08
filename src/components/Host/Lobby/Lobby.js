@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { socket } from '../Global/Global'
+import { socket } from '../../Global/Global'
+import './Lobby.css'
 const queryString = require('query-string')
+
 
 const Lobby = () => {
     const [quizId, setQuizId] = useState(null)
@@ -53,13 +55,15 @@ const Lobby = () => {
     return (
         <div className='lobby container'>
             <div className='topbar'>
-                <div>Join at this site: | site |</div>
-                <div>with this Game PIN: </div>
-                <div>{pin}</div>
+                <div className='pin-message'>Enter Game PIN to Join: </div>
+                <div className='pin'>{pin}</div>
+            </div>
+            <div className='title header'>
+                <h4>Aura</h4>
             </div>
 
-            <div>
-                <div>
+            <div className='mid-section'>
+                <div className='player-count'>
                     <div>
                         {playersCount || 0}
                     </div>
@@ -67,13 +71,14 @@ const Lobby = () => {
                         <PlayerLabel />
                     </div>
                 </div>
+                <Link to={`/start?quizId=${quizId}&pin=${pin}`}>
+                    <button className='start-button' onClick={startGame}>Start</button>
+                </Link>
             </div>
 
-            <Link to={`/start?quizId=${quizId}&pin=${pin}`}>
-                <button onClick={startGame}>Start</button>
-            </Link>
+            
 
-            <div>
+            <div className='player-container'>
                 <Players players={players} playersCount={playersCount} />
             </div>
         </div>
@@ -86,13 +91,13 @@ const Players = props => {
     } 
 
     const playerNames = props.players.map((p, i) => (
-        <div key={p._id}>
+        <div className='player' key={p._id}>
             {p.nickname}
         </div>
     ))
 
     return (
-        <div>
+        <div className='player-list'>
             {playerNames}
         </div>
     )

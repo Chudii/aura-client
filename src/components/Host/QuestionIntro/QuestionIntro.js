@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import './QuestionIntro.css'
 
 const QuestionIntro = props => {
     useEffect(() => {
@@ -11,12 +12,15 @@ const QuestionIntro = props => {
 
     return (
         <div className='gameintro container'>
-            <div>
+            <div className='top-left'>
                 {props.questionNum} of {props.totalNumQuestions}
             </div>
 
-            <div>
-                {props.question}
+            <div className='question-card'>
+                <div className='question-block'>
+                    {props.question}
+                </div>
+                
             </div>
         </div>
     )

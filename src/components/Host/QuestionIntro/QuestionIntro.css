@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+.gameintro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-left {
+    padding: 1vw;
+    font-family: 'AnythingSkribble';
+    font-size: 1.7rem;
+    background-color: rgb(161, 161, 161);
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.question-card {
+    background-color: #233e49;
+    font-size: 1.8rem;
+    font-family: 'Sanchez';
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question-block {
+    background-color: white;
+    padding: 1.5vw;
+}

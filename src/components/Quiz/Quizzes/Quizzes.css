@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+@font-face {
+    font-family: 'AnythingSkribble';
+    src: url('../../assets/Anything\ Skribble.ttf');
+}
+
+.quizzes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #233e49;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    height: 15vh;
+    width: 100%;
+    background-color: #0c222c;
+    margin-bottom: 7vh;
+}
+
+.all-quizzes {
+    display: flex;
+    align-items: flex-start;
+    width: 70%;
+}
+
+.quiz {
+    color:#0c222c;
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #efa032;
+    border: 2px solid #f3cd99;
+    padding: 2vw;
+    border-radius: 10px;
+    font-family: 'AnythingSkribble';
+}
+
+.quiz:hover {
+    background-color: #fab85b;
+}
+
+.sub-title {
+    margin-top: -2vh;
+    font-family: 'AnythingSkribble';
+    font-size: 3rem;
+    color: #efa032;
+}
+
+.quiz-title {
+    font-size: 1.4rem;
+    font-family: 'AnythingSkribble';
+    color: #46b59b;
+}
+
+.quiz-category {
+    font-size: 1.4rem;
+    font-family: 'AnythingSkribble';
+    color: #017e7f;
+}
+
+.question {
+    font-family: 'AnythingSkribble';
+    margin: 1vh;
+}
+
+.question p {
+    font-size: 1.3rem;
+}
+
+.host-button {
+    background-color: #017e7f;
+    font-family: 'AnimeAce';
+    font-size: 1rem;
+    margin: 1vh 0;
+    width: 15vw;
+    height: 4.5vh;
+    color: white;
+    border: 1px solid #017e7f;
+    border-radius: 5px;
+}
+
+.host-button:hover {
+    background-color: #46b59b;
+}

@@ -1,0 +1,99 @@
+.result {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #233e49;
+}
+
+.middle {
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    margin-top: -5vh;
+    margin-bottom: 5vh;
+}
+
+.chart {
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 14rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.is-correct {
+    font-family: 'pwsmallicons';
+    padding-right: 0.5vw;
+}
+
+.answered-container {
+    color: white;
+    font-family: 'Sanchez';
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
+    /* padding-bottom: 1vh; */
+}
+
+.a, .b, .c, .d {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'pwsmallicons';
+    min-height: 3rem;
+    border-radius: 3px;
+}
+
+.a-choice, .b-choice, .c-choice, .d-choice {
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
+}
+
+.a, .a-choice {
+    background-color: #46b59b;
+}
+
+.b, .b-choice {
+    background-color: #f1c64d;
+}
+
+.c, .c-choice {
+    background-color: #f4A261;
+}
+
+.d, .d-choice {
+    background-color: #eb452b;
+}
+
+.next-button {
+    background-color: #017e7f;
+    font-family: 'AnimeAce';
+    font-size: 1rem;
+    margin: 1vh 0;
+    width: 10vw;
+    height: 4.5vh;
+    color: white;
+    border: 1px solid #017e7f;
+    border-radius: 5px;
+}
+
+.next-button:hover {
+    background-color: #46b59b;
+}
+
+.button-container {
+    position: absolute;
+    top: 30vh;
+    right: 2vw;
+}
+
+.fi-ans, .se-ans, .th-ans, .fo-ans {
+    opacity: 0.5;
+}

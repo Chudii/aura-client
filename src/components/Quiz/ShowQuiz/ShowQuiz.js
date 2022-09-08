@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getQuiz } from '../../services/quiz-api'
+import { getQuiz } from '../../../services/quiz-api'
 
 const ShowQuiz = () => {
     const [id, setId] = useState({})
@@ -20,13 +20,16 @@ const ShowQuiz = () => {
     })
 
     return (
-        <div>
-            <h2>Quiz Preview</h2>
-            <h3>Title: {title}</h3>
-            <h3>Category: {category}</h3>
+        <div className='quizzes'>
+            <div className='title header'>
+                <h4>Aura</h4>
+            </div>
+            <h2 className='sub-title'>Quiz Preview</h2>
+            <h3 className='quiz-title'>Title: {title}</h3>
+            <h3 className='quiz-category'>Category: {category}</h3>
             <PreviewQuestions questions={questions}/>
             <Link to={`/lobby?quizId=${id}`}>
-                <button>Host Game</button>
+                <button className='host-button'>Host Game</button>
             </Link>
         </div>
     )
@@ -38,7 +41,7 @@ const PreviewQuestions = props => {
     }
 
     const questions = props.questions.map((q, i) => (
-        <div key={i}>
+        <div key={i} className='question'>
             <div>Question {i + 1}</div>
             <p>{q.question}</p>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { socket } from '../Global/Global'
+import { socket } from '../../Global/Global'
+import './Question.css'
 
 const Question = props => {
     const [time, setTime] = useState(20)
@@ -59,24 +60,30 @@ const Question = props => {
     }
 
     return (
-        <div className='question container'>
-            <div>
+        <div className='question-container'>
+            <div className='top-question'>
                <h1>{props.question}</h1> 
             </div>
 
-            <div>
-                <div>{time}</div>
-                <div>
+            <div className='question-middle'>
+                <div className='timer'>{time}</div>
+                <div className='players-answered'>
                     <div>{playersAnswered || 0}</div>
                     <div><AnsweredLabel /></div>
                 </div>
             </div>
 
             <div className='choices'>
-                <div><div></div>{props.answers.a}</div>
-                <div><div></div>{props.answers.b}</div>
-                <div><div></div>{props.answers.c}</div>
-                <div><div></div>{props.answers.d}</div>
+                <div className='top-choices'>
+                    <div className='first-ans'><div className='spade'>Ê</div>{props.answers.a}</div>
+                    <div className='second-ans'><div className='heart'>Ë</div>{props.answers.b}</div>
+                </div>
+                <div className='bottom-choices'>
+                    <div className='third-ans'><div className='diamond'>Ì</div>{props.answers.c}</div>
+                    <div className='fourth-ans'><div className='club'>Í</div>{props.answers.d}</div>
+                </div>
+                
+                
             </div>
         </div>
     )

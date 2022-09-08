@@ -1,9 +1,9 @@
 import React from 'react'
-import io from 'socket.io-client'
-import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { socket } from './Global/Global'
+import { socket } from '../../Global/Global'
+import Fire from '../../Logo/Fire'
+import './Home.css'
 
 const Home = () => {
     const [nickname, setNickname] = useState('')
@@ -61,36 +61,45 @@ const Home = () => {
 
     return (
         <div className='home container'>
-            <h1>Join Server</h1>
-            <form action='/player' onSubmit={handleSubmit}>
-                <div>
-                    <label>Enter Nickname</label>
-                    <input 
-                        id='name' 
-                        type='text' 
-                        name='nickname' 
-                        onChange={handleNicknameInput}
-                    />
-                </div>
-                <div>
-                    <label>Game Pin</label>
-                    <input 
-                        id='pin' 
-                        type='number' 
-                        name='pin' 
-                        onChange={handlePinInput}
-                    />
-                </div>
-                <div>
-                    <button type='submit'>Join</button>
-                </div>
+            <div className='logo'>
+                <h1 className='title'>Aura</h1>
+                <Fire className='fire'/>
+            </div>
 
-                <div>
-                    <HandleError />
-                </div>
-                <Link to={`/quizzes`}>Host Server</Link>
-                <Link to={`/quizzes/create`}>Create Quiz</Link>
-            </form>
+            <div className='form-container'>
+                <form action='/player' onSubmit={handleSubmit} autoComplete='off'>
+                    <div>
+                        <input 
+                            id='name' 
+                            type='text' 
+                            name='nickname' 
+                            onChange={handleNicknameInput}
+                            placeholder='DISPLAY NAME'
+                            maxLength={16}
+                        />
+                    </div>
+                    <div>
+                        <input 
+                            id='pin' 
+                            type='number' 
+                            name='pin' 
+                            onChange={handlePinInput}
+                            placeholder='PIN'
+                        />
+                    </div>
+                    <div>
+                        <button className='join-button' type='submit'>Join</button>
+                    </div>
+
+                    <div>
+                        <HandleError />
+                    </div>                 
+                </form>
+            </div>
+            
+            <div className='links'>
+                        <p><Link className='link' to={`/quizzes`}>Host Quiz</Link> | <Link className='link' to={`/quizzes/create`}>Create Quiz</Link></p>
+                    </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
-import { socket } from '../Global/Global'
+import { socket } from '../../Global/Global'
+import './Start.css'
 const queryString = require('query-string')
 
 const Start = () => {
@@ -36,12 +37,12 @@ const Start = () => {
 
     return (
         <div className='start container'>
-            <div>
+            <div className='hdr'>
                 <h1>{quizName}</h1>
             </div>
 
-            <div>
-                <div>{totalNumQuestions} Questions</div>
+            <div className='card'>
+                <div className='num-questions'>{totalNumQuestions} Questions</div>
                 <div>Are you ready?</div>
             </div>
             {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Navigate } from 'react-router-dom'
 import { socket } from '../Global/Global'
-import Preview from './Preview'
-import Answer from './Answer'
-import Result from './Result'
-import Ranking from './Ranking'
+import Preview from './Preview/Preview'
+import Answer from './Answer/Answer'
+import Result from './Result/Result'
+import Ranking from './Ranking/Ranking'
 
 const queryString = require('query-string')
 
@@ -92,14 +92,13 @@ export default class Play extends Component {
         })
 
         socket.on('player_results', data => {
-            const { step } = this.state
             const { score, rank, streak, lastCorrect } = data
             this.setState({
                 score: score,
                 rank: rank,
-                streal: streak,
+                streak: streak,
                 lastCorrect: lastCorrect,
-                step: step + 1
+                step: 3
             })
         })
 

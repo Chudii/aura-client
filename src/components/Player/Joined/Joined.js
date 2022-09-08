@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
-import { socket } from '../Global/Global'
+import { socket } from '../../Global/Global'
+import TopBar from '../TopBar/TopBar'
+import './Joined.css'
 const queryString = require('query-string')
-// import TopBar
 
 const Joined = () => {
     const [nickname, setNickname] = useState(null)
@@ -33,15 +34,16 @@ const Joined = () => {
 
     return (
         <div className='joined container'>
-            <div></div>
+            <TopBar pin={pin} nickname={nickname}/>
 
             <div className='mid'>
-                You're in
-            </div>
-
-            <div>
+                <div>You're in.</div>
+                <div>
                 See your name on the screen?
             </div>
+            </div>
+
+            
             {
                 redirect ? 
                 <Navigate to={`/ready?nickname=${nickname}&pin=${pin}`} />

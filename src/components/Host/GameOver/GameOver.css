@@ -1,13 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
 .gameover {
     height: 100vh;
     background-color: #233e49;
 }
 
 .title-container {
-    height: 15vh;
+    height: 13.3vh;
+    text-align: center;
 }
 
 .quiz-title {
     font-family: 'AnythingSkribble';
+    color: white;
     font-size: 3rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.podiums {
+    display: flex;
+}
+
+.plyr-column {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: white;
+    font-family: 'Sanchez';
+    font-size: 2rem;
+    min-width: 20rem;
+}
+
+.firstBar, .secondBar, .thirdBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+.firstBar {
+    min-height: 40rem;
+    z-index: 2;
+    background-color: #46b59b;
+    border-top: 2px solid #3d9782;
+    border-left: 2px solid #3d9782;
+    border-right: 2px solid #3d9782;
+    box-shadow: 0 0 4rem -1rem black;
+}
+
+.secondBar {
+    min-height: 30rem;
+    background-color: #00a59d;
+    border-top: 2px solid #016464;
+    border-left: 2px solid #016464;
+}
+
+.thirdBar {
+    min-height: 20rem;
+    background-color: #0f8f8f;
+    border-top: 2px solid #014b50;
+    border-right: 2px solid #014b50;
+}
+
+.plyr-nickname {
+    font-family: 'Shrikhand';
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+}
+
+.ground {
+    background-color: #0e191d;
+    height: 10vh;
+}
+
+@media only screen and (max-width: 420px) {
+    .quiz-title {
+        font-size: 2rem;
+    }
+
+    .plyr-column {
+        min-width: 12.5rem;
+        font-size: 1.6rem;
+    }
+
+    .plyr-nickname {
+        font-size: 1.6rem;
+    }
 }

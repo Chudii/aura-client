@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { socket } from '../Global/Global'
+import { socket } from '../../Global/Global'
 import { Navigate } from 'react-router-dom'
+import TopBar from '../TopBar/TopBar'
+import './Ready.css'
 const queryString = require('query-string')
-// import Topbar
 
 const Ready = () => {
     const [nickname, setNickname] = useState(null)
@@ -31,8 +32,7 @@ const Ready = () => {
 
     return (
         <div className='ready container'>
-            <div>
-            </div>
+            <TopBar pin={pin} nickname={nickname}/>
 
             <div className='mid'>Get Ready</div>
             {

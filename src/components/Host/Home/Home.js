@@ -98,12 +98,10 @@ const Home = () => {
             </div>
             
             <div className='links'>
-                        <p><Link className='link' to={`/quizzes`}>Host Quiz</Link> | <Link className='link' to={`/quizzes/create`}>Create Quiz</Link></p>
+                        <p><Link className='link' to={`/quizzes`}>Host Quiz</Link> | <Link className='link' to={`/`}>Create Quiz</Link></p>
                     </div>
         </div>
     )
 }
-
-//`/play?room=${randomNum}`
 
 export default Home

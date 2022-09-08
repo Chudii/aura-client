@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'pwsmallicons';
+    src: url('../../assets/PWSmallIcons.ttf');
+}
+
+.player-answer {
+    height: 100vh;
+    background-color: #233e49;
+}
+
+.answer-choices {
+    margin-top: 15vh;
+    height: 75%;
+}
+
+.upper, .lower {
+    
+    height: 40%;
+    display: flex;
+    margin-bottom: 1.5vh;
+    justify-content: space-evenly;
+}
+
+.player-a, .player-b, .player-c, .player-d {
+    border: none;
+    font-family: 'pwsmallicons';
+    font-size: 3.5rem;
+}
+
+.player-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #46b59b;
+    width: 49%;
+}
+
+.answer-choices button:hover {
+    border: 4px solid white;
+}
+
+.player-b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ecc865;
+    width: 49%;
+}
+
+
+
+.player-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4A261;
+    width: 49%;
+}
+
+
+
+.player-d {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eb452b;
+    width: 49%;
+}

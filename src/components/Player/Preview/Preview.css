@@ -1,0 +1,15 @@
+
+
+.preview-cont {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: cadetblue;
+}
+
+.main-bar {
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 ;
+}

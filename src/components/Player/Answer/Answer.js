@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import TopBar from '../TopBar/TopBar'
+import './Answer.css'
 
 const Answer = ({ submitAnswer, pin, nickname, questionNum, totalNumQuestions, answers }) => {
     const [answer, setAnswer] = useState('')
@@ -20,18 +22,14 @@ const Answer = ({ submitAnswer, pin, nickname, questionNum, totalNumQuestions, a
         )
     } else {
         body = (
-            <div>
-                <div>
-                    <button className='player-a' onClick={handleClick} value='a'>a</button>
+            <div className='answer-choices'>
+                <div className='upper'>
+                    <button className='player-a' onClick={handleClick} value='a'>Ê</button>
+                    <button className='player-b' onClick={handleClick} value='b'>Ë</button>
                 </div>
-                <div>
-                    <button className='player-b' onClick={handleClick} value='b'>b</button>
-                </div>
-                <div>
-                    <button className='player-c' onClick={handleClick} value='c'>c</button>
-                </div>
-                <div>
-                    <button className='player-d' onClick={handleClick} value='d'>d</button>
+                <div className='lower'>
+                    <button className='player-c' onClick={handleClick} value='c'>Ì</button>
+                    <button className='player-d' onClick={handleClick} value='d'>Í</button>
                 </div>
             </div>
         )
@@ -39,10 +37,11 @@ const Answer = ({ submitAnswer, pin, nickname, questionNum, totalNumQuestions, a
 
     return (
         <div className='player-answer'>
-            <div>{nickname} {pin}</div>
+            <TopBar pin={pin} nickname={nickname} questionNum={questionNum} totalNumQuestions={totalNumQuestions} />
             {body}
         </div>
     )
 }
 
 export default Answer
+

@@ -1,0 +1,21 @@
+
+.ranking {
+    height: 100vh;
+    background-color: #233e49;
+}
+
+.ranking .topbar-pin {
+    display: none;
+}
+
+.end-score {
+    background-color: #0c222c;
+    padding: 2vh;
+    margin-top: 2vh;
+    border-radius: 5px;
+}
+
+.end-rank, .end-score {
+    font-family: 'Sanchez';
+    font-size: 2.5rem;
+}

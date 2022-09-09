@@ -18,7 +18,7 @@ const QuestionDisplay = props => {
     if (props.questionNum === undefined) {
         return null
     } else {
-        component = <div style={{ textAlign: 'left' }}>{props.questionNum} of {props.totalNumQuestions}</div>
+        component = <div style={{ textAlign: 'left' }}></div>
     }
 
     return <>{component}</>

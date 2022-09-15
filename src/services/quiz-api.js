@@ -9,8 +9,6 @@ export const getQuizzes = async () => {
     } catch (err) {
         console.log(err)
     }
-
-    
 }
 
 export const getQuiz = (id) => {

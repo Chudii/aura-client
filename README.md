@@ -86,7 +86,7 @@ To Visit App:
 
 To run this project, you will need to add the following environment variables to your `.env` file
 
-A `PORT`, `MONGO_URI`, and `SESSION_SECRET`.
+A `PORT` & `MONGO_URI`.
 
 ---
 

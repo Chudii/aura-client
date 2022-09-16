@@ -47,7 +47,7 @@ Below are some snapshots for how the game would look when (forked &) cloned. Ins
 
 [![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
-[![Socket.io](https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white)](https://www.npmjs.com/)
+[![Socket.io](https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white)](https://socket.io/docs/v4/)
 
 ## Installation
 

@@ -16,8 +16,8 @@ const Answer = ({ submitAnswer, pin, nickname, questionNum, totalNumQuestions, a
 
     if (!buttonsOn) {
         body = (
-            <div>
-                <div>Answer submitted. Waiting for other players.</div>
+            <div className='answer-submitted'>
+                <h3>Answer submitted. Waiting for other players.</h3>
             </div>
         )
     } else {

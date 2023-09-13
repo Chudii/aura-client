@@ -73,6 +73,9 @@
 }
 
 .next-button {
+    position: absolute;
+    top: -275px;
+    right: 10px;
     background-color: #017e7f;
     font-family: 'AnimeAce';
     font-size: 1rem;
@@ -96,4 +99,8 @@
 
 .fi-ans, .se-ans, .th-ans, .fo-ans {
     opacity: 0.5;
+}
+
+.isCorrect, .answer-streak {
+    font-size: 1.3rem;
 }

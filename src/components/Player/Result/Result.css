@@ -6,7 +6,7 @@
 }
 
 .player-result {
-    height: 100vh;
+    height: 100%;
     background-color: cadetblue;
 }
 
@@ -24,7 +24,7 @@
     align-items: center;
     font-family: 'AnythingSkribble';
     margin-top: -5vh;
-    font-size: 2.7rem;
+    /* font-size: 2.7rem; */
     color: white;
 }
 

@@ -187,7 +187,7 @@ export default class Play extends Component {
         }
 
         return (
-            <div>
+            <div className='game'>
                 {component}
                 {
                     this.state.hostDisconnected ?

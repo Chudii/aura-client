@@ -4,7 +4,7 @@
 }
 
 .player-answer {
-    height: 100vh;
+    height: 100%;
     background-color: #233e49;
 }
 
@@ -65,4 +65,14 @@
     justify-content: center;
     background-color: #eb452b;
     width: 49%;
+}
+
+.answer-submitted {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sanchez';
+    color: white;
+    font-size: 1.3rem;
 }

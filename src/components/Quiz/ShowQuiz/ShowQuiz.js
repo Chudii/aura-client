@@ -1,3 +1,4 @@
+import './ShowQuiz.css'
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getQuiz } from '../../../services/quiz-api'
@@ -48,7 +49,7 @@ const PreviewQuestions = props => {
     ))
 
     return (
-        <div>
+        <div className='quiz-list'>
             {questions}
         </div>
     )
